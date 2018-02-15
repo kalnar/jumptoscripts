@@ -1,0 +1,19 @@
+#!/bin/bash
+
+if [ -z "${kalnar_tool_one_mode}" ]; then
+  export kalnar_tool_one_mode="octave"
+else
+  echo ${kalnar_tool_one_mode}
+fi
+
+
+
+case ${kalnar_tool_one_mode} in
+  "mysql")
+    jumpapp mysql-workbench
+    ;;
+  "octave")
+    jumpapp octave-gui 
+    ;;
+esac
+

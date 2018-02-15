@@ -1,0 +1,26 @@
+#!/bin/bash
+
+if [ -z "${kalnar_editor_mode}" ]; then
+  export kalnar_editor_mode="javascript"
+else
+  echo ${kalnar_editor_mode}
+fi
+
+case ${kalnar_editor_mode} in
+  "java")
+    jumpapp -c jetbrains-idea-ce idea
+    ;;
+  "cpp")
+    jumpapp clion
+    ;;
+  "python")
+    jumpapp pycharm
+    ;;
+  "android")
+    jumpapp androidstudio
+    ;;
+  "javascript")
+    jumpapp webstorm
+    ;;
+esac
+

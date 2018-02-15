@@ -1,0 +1,24 @@
+#!/bin/bash
+
+if [ -z "${kalnar_pdf_mode}" ]; then
+  export kalnar_pdf_mode="zathura"
+else
+  echo ${kalnar_pdf_mode}
+fi
+
+
+case ${kalnar_pdf_mode} in
+  "foxit")
+    jumpapp -c Foxit foxitreader
+    ;;
+  "qpdf")
+    jumpapp qpdfview
+    ;;
+  "zathura")
+    jumpapp zathura
+    ;;
+  "okular")
+    jumpapp okular
+    ;;
+esac
+

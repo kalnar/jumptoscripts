@@ -1,7 +1,7 @@
 #!/bin/bash
 
 if [ -z "${kalnar_editor_mode}" ]; then
-  export kalnar_editor_mode="javascript"
+  export kalnar_editor_mode=""
 else
   echo ${kalnar_editor_mode}
 fi
